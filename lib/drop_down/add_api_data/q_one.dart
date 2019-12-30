@@ -78,9 +78,6 @@ class _DropDownDemoState extends State<DropDownDemo> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: buildDropdownButton(),
-    );
+    return buildDropdownButton();
   }
 }
