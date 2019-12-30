@@ -1,6 +1,6 @@
-# so_answers
+# Flutter code snippets
 
-A new Flutter project.
+This repository contains demo codes that I am playing with and some are used to help others.
 
 ## Getting Started
 
