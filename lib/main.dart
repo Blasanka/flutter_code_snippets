@@ -1,21 +1,44 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
- void main() => runApp(MyApp());
+void main() {
+  runApp(MaterialApp(home: ExampleScreen()));
+}
 
- class MyApp extends StatelessWidget {
-   // This widget is the root of your application.
-   @override
-   Widget build(BuildContext context) {
-     return MaterialApp(
-       title: 'Flutter SO answers sample snippet',
-       theme: ThemeData(
-         primarySwatch: Colors.blue,
-       ),
-       home: Scaffold(
-         body: Center(
-           child: Text("There are separate directory for each code snippets which you can replace with this main.dart file"),
-         ),
-       ),
-     );
-   }
- }
+class ExampleScreen extends StatefulWidget {
+  ExampleScreen({Key key}) : super(key: key);
+
+  @override
+  _ExampleScreenState createState() => _ExampleScreenState();
+}
+
+class _ExampleScreenState extends State<ExampleScreen> {
+  List data = [];
+  bool isLoading = true;
+
+  void fetchData() async {
+    final res = await http.get("https://jsonplaceholder.typicode.com/users");
+    data = json.decode(res.body);
+    setState(() => isLoading = false);
+  }
+
+  // this method invokes only when new route push to navigator
+  @override
+  void initState() {
+    super.initState();
+    fetchData();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: isLoading
+            ? CircularProgressIndicator()
+            : Text(data?.toString() ?? ""),
+      ),
+    );
+  }
+}

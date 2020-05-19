@@ -1,0 +1,49 @@
+{
+  "loginUser": {
+    "token": "eyJhbGciOiZTMzLTQ4NmItYmFhNS0wODRhMWI2Nzg3YjQiJhY2Nlc3MifQ.bLKz-y9W6VKXRXkG6fbxlrmcowRNupKL0g",
+    "user": {
+      "aclRoleId": [
+        "cmr",
+        "bsp"
+      ],
+      "confirmationSentAt": "2019-12-30T09:12:08Z",
+      "confirmationToken": "$argon2id$v=19$m=131072,t=8,p=4$WQoFfhBUfabw7g1BgNuuxg$BmUEYNWTZHeCnY0xCqOT+nWEDNlXcrNIEWQZkA51oCk",
+      "confirmedAt": null,
+      "country": {
+        "capital": "New Delhi",
+        "code": "IND",
+        "contactInfo": null,
+        "currencyCode": "INR",
+        "currencySymbol": "₹",
+        "id": "3",
+        "isdCode": "+91",
+        "name": "India",
+        "officialName": "The Republic of India"
+      },
+      "currentSignInAt": null,
+      "email": "john@mailinator.com",
+      "failedAttempts": null,
+      "id": "1",
+      "language": {
+        "code": "EN",
+        "id": "1",
+        "isActive": true,
+        "name": "English"
+      },
+      "lockedAt": null,
+      "meta": null,
+      "mobile": "(999)-000-0040",
+      "profile": {
+        "first_name": "John",
+        "last_name": "Doe"
+      },
+      "resetPasswordSentAt": null,
+      "resetPasswordToken": null,
+      "scopes": null,
+      "signInCount": 12,
+      "statusId": "confirmed",
+      "token": null,
+      "unlockToken": null
+    }
+  }
+}
